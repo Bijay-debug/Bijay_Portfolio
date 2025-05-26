@@ -36,6 +36,362 @@
   ======================================================== -->
 </head>
 
+<style>
+  .app-overview {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50; /* dark blue-gray text */
+  background-color: #f9fbfc; /* very light blue-gray background */
+  padding: 25px 20px;
+  line-height: 1.6;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  }
+
+  .app-overview h2 {
+    font-size: 1.75rem;
+    color: #1abc9c;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #caf0f8;
+    padding-bottom: 0.3rem;
+  }
+
+  .app-overview p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .app-overview ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .app-overview li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .app-overview strong {
+    color: #2c3e50;
+  }
+
+  .empathize-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50; /* dark blue-gray text */
+  background-color: #f9fbfc; /* very light blue-gray background */
+  padding: 25px 20px;
+  line-height: 1.6;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+}
+
+.empathize-section h2 {
+  color: #1abc9c; /* turquoise green */
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+.empathize-section h3 {
+  color: #34495e; /* dark slate */
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 5px solid #1abc9c;
+  padding-left: 12px;
+}
+
+.empathize-section h4 {
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.empathize-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.empathize-section p strong {
+  color: #16a085; /* dark turquoise */
+}
+
+.empathize-section p em {
+  font-style: italic;
+  color: #7f8c8d; /* muted gray */
+}
+
+.empathize-section ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.empathize-section ul li {
+  margin-bottom: 10px;
+}
+
+.empathize-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.empathize-section table td {
+  border: 1px solid #bdc3c7;
+  padding: 10px 15px;
+  vertical-align: top;
+  font-size: 0.95rem;
+  color: #34495e;
+  background-color: #ecf0f1;
+}
+
+.empathize-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto; /* centers images horizontally */
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.define-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.define-section h2 {
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+.define-section h3 {
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 5px solid #1abc9c;
+  padding-left: 12px;
+}
+
+.define-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.define-section p strong {
+  color: #16a085;
+}
+
+.define-section ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.define-section ul li {
+  margin-bottom: 10px;
+}
+
+.define-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto; /* centers images horizontally */
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+
+.ideate-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  line-height: 1.6;
+}
+
+.ideate-section h2 {
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+.ideate-section h3 {
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 5px solid #1abc9c;
+  padding-left: 12px;
+}
+
+.ideate-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.ideate-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto; /* centers images horizontally */
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Shared base style for all sections */
+.wireframe-section,
+.lowfi-section,
+.hifi-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  line-height: 1.6;
+}
+
+/* Section headings */
+.wireframe-section h2,
+.lowfi-section h2,
+.hifi-section h2 {
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+/* Paragraph styling */
+.wireframe-section p,
+.lowfi-section p,
+.hifi-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Image styling for all sections */
+.wireframe-section img,
+.lowfi-section img,
+.hifi-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.research-section,
+.accessibility-section,
+.takeaway-section,
+.conclusion-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.08);
+  line-height: 1.6;
+}
+
+/* Section Headings */
+.research-section h2,
+.accessibility-section h2,
+.takeaway-section h2,
+.conclusion-section h2 {
+  color: #1abc9c;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+/* Paragraph and List Styling */
+.research-section p,
+.accessibility-section p,
+.takeaway-section p,
+.conclusion-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.accessibility-section ul,
+.takeaway-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #2c3e50;
+}
+
+.accessibility-section li,
+.takeaway-section li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Images Centered & Styled */
+.research-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+</style>
+
 <body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
@@ -151,41 +507,47 @@
           </div>
 
         </div>
-        <div>
-          <h2>Purpose:</h2>
-          <p>The Medical Health Mobile App aims to enhance healthcare accessibility by providing users with a digital platform to track health records, book appointments, receive medication reminders, consult doctors via telemedicine, and get personalized health insights. The app will ensure seamless communication between patients and healthcare providers while prioritizing data privacy and security. </p>
-        </div>
-        <div>
-          <h2>Problem Statement:</h2>
-          <p>Patients sometimes have trouble managing their health because they have trouble keeping track of their medical data, scheduling visits on time, remembering their prescriptions, and finding trustworthy health advice. The complexity, disarray, and lack of integration of current healthcare solutions make it difficult for users—particularly the elderly and those with chronic conditions—to effectively manage their health.</p>
-        </div>
-        <div>
-          <h2>Target Audience:</h2>
+        <div class="app-overview">
+          <div class="sec purpose">
+            <h2>Purpose:</h2>
+            <p>The Medical Health Mobile App aims to enhance healthcare accessibility by providing users with a digital platform to track health records, book appointments, receive medication reminders, consult doctors via telemedicine, and get personalized health insights. The app will ensure seamless communication between patients and healthcare providers while prioritizing data privacy and security.</p>
+          </div>
+
+          <div class="sec problem-statement">
+            <h2>Problem Statement:</h2>
+            <p>Patients sometimes have trouble managing their health because they have trouble keeping track of their medical data, scheduling visits on time, remembering their prescriptions, and finding trustworthy health advice. The complexity, disarray, and lack of integration of current healthcare solutions make it difficult for users—particularly the elderly and those with chronic conditions—to effectively manage their health.</p>
+          </div>
+
+          <div class="sec target-audience">
+            <h2>Target Audience:</h2>
             <ul>
               <li><strong>Patients:</strong> Individuals with chronic illnesses, those requiring frequent medical consultations, and general users who want to monitor their health.</li>
               <li><strong>Healthcare Providers:</strong> Doctors, nurses, and caregivers who need a streamlined way to track patient history and manage appointments.</li>
               <li><strong>Elderly Individuals:</strong> Senior citizens who may require medication reminders and easy access to telehealth services.</li>
               <li><strong>Caregivers & Family Members:</strong> People responsible for monitoring the health of elderly or dependent individuals.</li>
             </ul>
-        </div>
-        <div>
-          <h2>Goals:</h2>
+          </div>
+
+          <div class="sec goals">
+            <h2>Goals:</h2>
             <ul>
               <li><strong>Improve Healthcare Accessibility:</strong> Provide a simple interface for users to book appointments, consult doctors, and access health records from anywhere.</li>
-              <li><strong>Enhance Health Management:</strong> Offer medication reminders, symptom tracking, and personalized health recommendations based on user data. </li>
+              <li><strong>Enhance Health Management:</strong> Offer medication reminders, symptom tracking, and personalized health recommendations based on user data.</li>
               <li><strong>Streamline Doctor-Patient Interaction:</strong> Facilitate better communication between patients and healthcare providers through telemedicine and chat support.</li>
             </ul>
+          </div>
         </div>
-        <div>
+
+        <div class="empathize-section">
           <h2>Empathize</h2>
-    
+
           <h3>User Research:</h3>
           <p><strong>Q:</strong> How do you currently manage your medications and doctor appointments?<br/>
-            <strong>A:</strong>“I use a notebook to write down my medications and appointment dates, but I often forget to check it.”</p>
-          
+            <strong>A:</strong> “I use a notebook to write down my medications and appointment dates, but I often forget to check it.”</p>
+
           <p><strong>Q:</strong> What challenges do you face when managing patient records?<br/>
             <strong>A:</strong> “Sometimes patients lose their prescription history, and it takes extra time to reconstruct their past treatments.”</p>
-          
+
           <h4>Survey of 200 Mobile Health App Users:</h4>
           <ul>
             <li>65% said they forget to take their medication on time.</li>
@@ -196,16 +558,16 @@
           <h3>User Insights:</h3>
           <ul>
             <li><strong>Patients Struggle with Managing Prescriptions and Appointments:</strong> A user forgets to take their blood pressure medicine twice a week because there is no effective reminder system.<br/>
-            <em>Possible Solution:</em> Implement smart medication reminders with push notifications and alerts.</li>
-            
+              <em>Possible Solution:</em> Implement smart medication reminders with push notifications and alerts.</li>
+
             <li><strong>Doctors Need a Streamlined System for Tracking Patient History:</strong> A doctor spends extra time manually searching for past prescriptions in paper records.<br/>
-            <em>Possible Solution:</em> Integrate digital patient records with quick access features.</li>
-            
+              <em>Possible Solution:</em> Integrate digital patient records with quick access features.</li>
+
             <li><strong>Caregivers Require Real-Time Updates on a Patient’s Condition:</strong> A mother taking care of her diabetic son struggles to track his sugar levels when he’s away at college.<br/>
-            <em>Possible Solution:</em> Introduce a caregiver dashboard where authorized users can access real-time health data.</li>
-            
+              <em>Possible Solution:</em> Introduce a caregiver dashboard where authorized users can access real-time health data.</li>
+
             <li><strong>Users Prefer an Easy-to-Use, Non-Technical Interface:</strong> A 60-year-old user uninstalls a health app because they find the navigation confusing.<br/>
-            <em>Possible Solution:</em> Design an intuitive, minimalist UI with larger fonts and simple icons.</li>
+              <em>Possible Solution:</em> Design an intuitive, minimalist UI with larger fonts and simple icons.</li>
           </ul>
 
           <h3>Empathy Map:</h3>
@@ -231,88 +593,112 @@
               <td>Frustrated, overwhelmed, and concerned about missing important health events.</td>
             </tr>
           </table>
-          <img src="./assets/img/portfolio/App/MedicalApp/Empathy.png" alt="image" style="margin: 20px 0;">
+
+          <img src="./assets/img/portfolio/App/MedicalApp/Empathy.png" alt="Empathy Map">
 
           <h3>User Persona:</h3>
           <p>A user persona is a detailed profile that represents you based on your skills, interests, and ongoing projects. It helps define your strengths, expertise, and goals, making it easier to align your work with your interests.</p>
-          <img src="./assets/img/portfolio/App/MedicalApp/Persona1.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/Persona2.png" alt="image" style="margin: 10px 0;">
+          <img src="./assets/img/portfolio/App/MedicalApp/Persona1.png" alt="User Persona 1">
+          <img src="./assets/img/portfolio/App/MedicalApp/Persona2.png" alt="User Persona 2">
 
           <h3>User Story:</h3>
           <p>A User Story is a short, simple description of a feature told from the perspective of the person who desires the new capability, usually a user or customer of a system. It’s commonly used in Agile software development to capture a specific need in a concise way.</p>
-          <img src="./assets/img/portfolio/App/MedicalApp/story.png" alt="image" style="margin: 20px 0;">
+          <img src="./assets/img/portfolio/App/MedicalApp/story.png" alt="User Story">
 
           <h3>User Journey Map:</h3>
           <p>A User Journey Map is a visual or narrative representation of the user’s experience as they interact with a product or service. It highlights the steps a user takes to achieve a goal, including their emotions, needs, and pain points at each stage. It helps designers and developers create more user-centric solutions.</p>
-          <img src="./assets/img/portfolio/App/MedicalApp/Journey.png" alt="image" style="margin: 20px 0;">
+          <img src="./assets/img/portfolio/App/MedicalApp/Journey.png" alt="User Journey Map">
         </div>
-        <div>
+
+        <div class="define-section">
           <h2>Define</h2>
           <h3>Define Problem statement:</h3>
           <p>Users struggle with managing their health due to difficulties in booking appointments, remembering medications, and tracking medical history. Our Medical Health Mobile App will provide an all-in-one solution by offering appointment scheduling, prescription reminders, telemedicine consultations, and digital health records to enhance healthcare accessibility and efficiency.</p>
-            <ul>
-              <li><strong>Who:</strong> College students, working professionals, elderly individuals, and caregivers who struggle with managing their health effectively.</li>
-              <li><strong>What:</strong> They face difficulties in tracking medical records, booking doctor appointments, remembering medications, and accessing reliable health information.</li>
-              <li><strong>When:</strong> Whenever they need to monitor their health, schedule check-ups, refill prescriptions, or consult doctors.</li>
-              <li><strong>Where:</strong> At home, college, workplaces, or while traveling—anywhere they require healthcare access through a mobile device.</li>
-              <li><strong>Why:</strong> Existing healthcare systems are fragmented, making it difficult to manage appointments, prescriptions, and personal health data in one place.</li>
-              <li><strong>How:</strong> By developing a Medical Health Mobile App that integrates appointment booking, medication reminders, digital health records, telemedicine consultations, and personalized health insights.</li>
-            </ul>
-            <img src="./assets/img/portfolio/App/MedicalApp/Problem1.png" alt="image" style="margin: 20px 0;">
-            <img src="./assets/img/portfolio/App/MedicalApp/Problem2.png" alt="image" style="margin: 20px 0;">
+          <ul>
+            <li><strong>Who:</strong> College students, working professionals, elderly individuals, and caregivers who struggle with managing their health effectively.</li>
+            <li><strong>What:</strong> They face difficulties in tracking medical records, booking doctor appointments, remembering medications, and accessing reliable health information.</li>
+            <li><strong>When:</strong> Whenever they need to monitor their health, schedule check-ups, refill prescriptions, or consult doctors.</li>
+            <li><strong>Where:</strong> At home, college, workplaces, or while traveling—anywhere they require healthcare access through a mobile device.</li>
+            <li><strong>Why:</strong> Existing healthcare systems are fragmented, making it difficult to manage appointments, prescriptions, and personal health data in one place.</li>
+            <li><strong>How:</strong> By developing a Medical Health Mobile App that integrates appointment booking, medication reminders, digital health records, telemedicine consultations, and personalized health insights.</li>
+          </ul>
+          <img src="./assets/img/portfolio/App/MedicalApp/Problem1.png" alt="image">
+          <img src="./assets/img/portfolio/App/MedicalApp/Problem2.png" alt="image">
 
-            <h3>Define Hypothesis statement:</h3>
-            <p>A Hypothesis Statement is a clear, testable prediction about the relationship between two or more variables. It is commonly used in scientific research, product development, A/B testing, and UX design to guide experiments and decision-making.</p>
-            <img src="./assets/img/portfolio/App/MedicalApp/Hypothesis.png" alt="image" style="margin: 20px 0;">
+          <h3>Define Hypothesis statement:</h3>
+          <p>A Hypothesis Statement is a clear, testable prediction about the relationship between two or more variables. It is commonly used in scientific research, product development, A/B testing, and UX design to guide experiments and decision-making.</p>
+          <img src="./assets/img/portfolio/App/MedicalApp/Hypothesis.png" alt="image">
         </div>
-        <div>
+
+        <div class="ideate-section">
           <h2>Ideate</h2>
           <h3>Goal Statement:</h3>
           <p>Our goal is to design a user-friendly medical health app that empowers users to manage their health effectively by providing easy access to medical records, appointment scheduling, and personalized health recommendations.</p>
-            <img src="./assets/img/portfolio/App/MedicalApp/Goal.png" alt="image" style="margin: 20px 0;">
+          <img src="./assets/img/portfolio/App/MedicalApp/Goal.png" alt="image">
 
           <h3>User flow:</h3>
           <p>A User Flow (also called a user flow diagram) is a visual representation of the path a user takes to accomplish a specific task within a product or website. It maps out each step or screen the user interacts with and shows the decision points along the journey.</p>
-          <img src="./assets/img/portfolio/App/MedicalApp/Userflow.png" alt="image" style="margin: 20px 0;">
+          <img src="./assets/img/portfolio/App/MedicalApp/Userflow.png" alt="image">
 
           <h3>Storyboard:</h3>
           <p>A Storyboard is a visual or narrative representation of a user’s interaction with a product or service, shown through a sequence of illustrated or described scenes. It’s widely used in UX design, product development, and filmmaking to visualize the user experience, empathize with users, and communicate ideas clearly.</p>
-          <img src="./assets/img/portfolio/App/MedicalApp/Storyboard.jpg" alt="image" style="margin: 20px 0;">
-
+          <img src="./assets/img/portfolio/App/MedicalApp/Storyboard.jpg" alt="image">
         </div>
-        <div>
+
+        <div class="wireframe-section">
           <h2>Paper Wireframe</h2>
           <p>A Paper Wireframe is a hand-drawn sketch of a user interface that outlines the basic layout, structure, and functionality of a digital product like a website or mobile app. It's an essential early step in the design process to quickly explore ideas and get feedback without worrying about visual details.</p>
-          <img src="./assets/img/portfolio/App/MedicalApp/Paper1.jpg" alt="image" style="margin: 20px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/Paper2.jpg" alt="image" style="margin: 20px 0;">
+          <img src="./assets/img/portfolio/App/MedicalApp/Paper1.jpg" alt="Paper Wireframe 1">
+          <img src="./assets/img/portfolio/App/MedicalApp/Paper2.jpg" alt="Paper Wireframe 2">
         </div>
 
-        <div>
-          <h2>UX Research Study — Plan</h2>
-          <img src="./assets/img/portfolio/App/MedicalApp/Research1.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/Research2.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/Research3.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/Research4.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/Research5.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/Research6.png" alt="image" style="margin: 10px 0;">
-        </div>
-
-        <div>
+        <div class="lowfi-section">
           <h2>Low-fidelity designs</h2>
           <p>Low-fidelity designs are basic visual representations of a product or system used in the early stages of design and development. They focus on layout, structure, and functionality rather than aesthetics, colors, or final content.</p>
-          <img src="./assets/img/portfolio/App/MedicalApp/Low1.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/Low2.png" alt="image" style="margin: 10px 0;">
+          <img src="./assets/img/portfolio/App/MedicalApp/Low1.png" alt="Low-fidelity Design 1">
+          <img src="./assets/img/portfolio/App/MedicalApp/Low2.png" alt="Low-fidelity Design 2">
         </div>
 
-        <div>
+        <div class="hifi-section">
           <h2>High-fidelity designs</h2>
           <p>High-fidelity (hi-fi) designs are detailed and polished visual representations of a product that closely resemble the final version. They are typically created after low-fidelity designs have been approved and refined.</p>
-          <img src="./assets/img/portfolio/App/MedicalApp/High1.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/MedicalApp/High2.png" alt="image" style="margin: 10px 0;">
+          <img src="./assets/img/portfolio/App/MedicalApp/High1.png" alt="High-fidelity Design 1">
+          <img src="./assets/img/portfolio/App/MedicalApp/High2.png" alt="High-fidelity Design 2">
         </div>
 
-      </div>
+        <div class="research-section">
+          <h2>UX Research Study — Plan</h2>
+          <img src="./assets/img/portfolio/App/MedicalApp/Research1.png" alt="Research Image 1">
+          <img src="./assets/img/portfolio/App/MedicalApp/Research2.png" alt="Research Image 2">
+          <img src="./assets/img/portfolio/App/MedicalApp/Research3.png" alt="Research Image 3">
+          <img src="./assets/img/portfolio/App/MedicalApp/Research4.png" alt="Research Image 4">
+          <img src="./assets/img/portfolio/App/MedicalApp/Research5.png" alt="Research Image 5">
+          <img src="./assets/img/portfolio/App/MedicalApp/Research6.png" alt="Research Image 6">
+        </div>
 
+        <div class="accessibility-section">
+          <h2>Accessibility Considerations</h2>
+          <ul>
+            <li>High contrast color scheme for users with visual impairments.</li>
+            <li>Text-to-speech compatibility and screen reader support.</li>
+            <li>Large buttons and clear icons for motor accessibility.</li>
+            <li>All forms use ARIA labels and semantic HTML for better navigation.</li>
+          </ul>
+        </div>
+
+        <div class="takeaway-section">
+          <h2>Takeaways</h2>
+          <ul>
+            <li><strong>What I learned:</strong> The importance of user-centered design, especially in sensitive fields like healthcare.</li>
+            <li><strong>Challenges:</strong> Simplifying complex features without compromising functionality.</li>
+            <li><strong>Success:</strong> Positive feedback from user testing and prototype walkthroughs.</li>
+          </ul>
+        </div>
+
+        <div class="conclusion-section">
+          <h2>Conclusion</h2>
+          <p>The Medical Health Mobile App bridges the gap between patients and healthcare providers by offering a centralized, accessible, and intuitive platform for health management. With features like appointment scheduling, medication reminders, teleconsultation, and caregiver dashboards, the app meets a critical need in digital healthcare. Future enhancements may include AI-based health predictions and multilingual support.</p>
+        </div>
     </section><!-- /Portfolio Details Section -->
 
   </main>

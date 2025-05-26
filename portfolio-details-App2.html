@@ -36,6 +36,399 @@
   ======================================================== -->
 </head>
 
+<style>
+  .app-overview {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50; /* dark blue-gray text */
+  background-color: #f9fbfc; /* very light blue-gray background */
+  padding: 25px 20px;
+  line-height: 1.6;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  }
+
+/* Headings */
+.fashion-purpose-section h2,
+.fashion-problem-section h2,
+.fashion-audience-section h2,
+.fashion-goals-section h2 {
+  font-size: 1.75rem;
+    color: #1abc9c;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #caf0f8;
+    padding-bottom: 0.3rem;
+}
+
+/* Paragraph */
+.fashion-purpose-section p,
+.fashion-problem-section p {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Lists */
+.fashion-audience-section ul,
+.fashion-goals-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.fashion-audience-section li,
+.fashion-goals-section li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.fashion-audience-section li strong,
+.fashion-goals-section li strong {
+  color: #1abc9c;
+}
+
+.fashion-empathize-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #fefefe;
+  padding: 30px 20px;
+  margin: 0 auto 10px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+}
+
+.fashion-empathize-section h2 {
+  color: #1abc9c; /* turquoise green */
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+.fashion-empathize-section h3 {
+  color: #34495e; /* dark slate */
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 5px solid #1abc9c;
+  padding-left: 12px;
+}
+
+.fashion-empathize-section h4 {
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.fashion-empathize-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.fashion-empathize-section p strong {
+  color: #16a085; /* dark turquoise */
+}
+
+.fashion-empathize-section ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.fashion-empathize-section ul li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.insights-list em {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.empathy-map-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.empathy-map-table td {
+  border: 1px solid #bdc3c7;
+  padding: 10px 15px;
+  vertical-align: top;
+  font-size: 0.95rem;
+  color: #34495e;
+  background-color: #ecf0f1;
+}
+
+.empathy-map-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Images */
+.empathy-img,
+.persona-img,
+.story-img,
+.journey-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto; /* centers images horizontally */
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.define-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.define-section h2 {
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+.define-section h3 {
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 5px solid #1abc9c;
+  padding-left: 12px;
+}
+
+.define-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.define-section p strong {
+  color: #16a085;
+}
+
+.define-section ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.define-section li {
+  margin-bottom: 10px;
+}
+
+.define-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto; /* centers images horizontally */
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.ideate-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  line-height: 1.6;
+}
+
+.audit-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  line-height: 1.6;
+}
+
+.ideate-section h2,
+.audit-section h2 {
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+.ideate-section h3,
+.audit-section h3 {
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 5px solid #1abc9c;
+  padding-left: 12px;
+}
+
+.ideate-section p,
+.audit-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.ideate-section ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.ideate-section li {
+  margin-bottom: 10px;
+}
+
+.ideate-section img,
+.audit-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto; /* centers images horizontally */
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.paper-wireframe-section,
+.low-fidelity-section,
+.high-fidelity-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.1);
+  line-height: 1.6;
+}
+
+.paper-wireframe-section h2,
+.low-fidelity-section h2,
+.high-fidelity-section h2 {
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+.paper-wireframe-section p,
+.low-fidelity-section p,
+.high-fidelity-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.paper-wireframe-section img,
+.low-fidelity-section img,
+.high-fidelity-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.research-section,
+.accessibility-section,
+.takeaway-section,
+.conclusion-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f9fbfc;
+  padding: 25px 20px;
+  max-width: 100%;
+  margin: 0 auto 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(44, 62, 80, 0.08);
+  line-height: 1.6;
+}
+
+/* Section Headings */
+.research-section h2,
+.accessibility-section h2,
+.takeaway-section h2,
+.conclusion-section h2 {
+  color: #1abc9c;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 8px;
+}
+
+/* Paragraph and List Styling */
+.research-section p,
+.accessibility-section p,
+.takeaway-section p,
+.conclusion-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.accessibility-section ul,
+.takeaway-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #2c3e50;
+}
+
+.accessibility-section li,
+.takeaway-section li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Images Centered & Styled */
+.research-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+</style>
+
 <body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
@@ -151,42 +544,46 @@
           </div>
 
         </div>
+        <div class="app-overview">
+          <div class="fashion-purpose-section">
+            <h2>Purpose:</h2>
+            <p>The E-Commerce Fashion App is a mobile-first shopping platform designed for style-conscious users who want a personalized and seamless fashion experience. The app curates trending apparel, accessories, and footwear from both global and emerging designers, offering a tailored, smart, and dynamic shopping journey.</p>
+          </div>
 
-        <div>
-          <h2>Purpose:</h2>
-          <p>The E-Commerce Fashion App is a mobile-first shopping platform designed for style-conscious users who want a personalized and seamless fashion experience. The app curates trending apparel, accessories, and footwear from both global and emerging designers, offering a tailored, smart, and dynamic shopping journey.</p>
-        </div>
-        <div>
-          <h2>Problem Statement:</h2>
-          <p>Many users struggle to find fashion platforms that balance trend relevance, ease of navigation, and personal recommendations. Existing apps often lack customization, overload users with irrelevant suggestions, or provide subpar mobile experiences. This app aims to combine personalization, convenience, and curated discovery in one cohesive platform.</p>
-        </div>
-        <div>
-          <h2>Target Audience:</h2>
+          <div class="fashion-problem-section">
+            <h2>Problem Statement:</h2>
+            <p>Many users struggle to find fashion platforms that balance trend relevance, ease of navigation, and personal recommendations. Existing apps often lack customization, overload users with irrelevant suggestions, or provide subpar mobile experiences. This app aims to combine personalization, convenience, and curated discovery in one cohesive platform.</p>
+          </div>
+
+          <div class="fashion-audience-section">
+            <h2>Target Audience:</h2>
             <ul>
-              <li><strong>Fashion Enthusiasts:</strong>Users who frequently shop online and follow fashion trends.</li>
-              <li><strong>Young Adults (18–35):</strong>Tech-savvy users who expect intuitive design and smart recommendations.</li>
-              <li><strong>Mobile Shoppers:</strong>Users who primarily browse and buy fashion items via mobile devices.</li>
+              <li><strong>Fashion Enthusiasts:</strong> Users who frequently shop online and follow fashion trends.</li>
+              <li><strong>Young Adults (18–35):</strong> Tech-savvy users who expect intuitive design and smart recommendations.</li>
+              <li><strong>Mobile Shoppers:</strong> Users who primarily browse and buy fashion items via mobile devices.</li>
             </ul>
-        </div>
-        <div>
-          <h2>Goals:</h2>
+          </div>
+
+          <div class="fashion-goals-section">
+            <h2>Goals:</h2>
             <ul>
               <li>Create an intuitive, engaging mobile shopping experience.</li>
               <li>Offer highly personalized fashion recommendations.</li>
               <li>Improve product discoverability with smart filters and search.</li>
               <li>Build user loyalty through features like wishlists, virtual try-ons, and style feeds.</li>
             </ul>
+          </div>
         </div>
-        <div>
+        <div class="fashion-empathize-section">
           <h2>Empathize</h2>
-    
+
           <h3>User Research:</h3>
-          <p><strong>Q:</strong>What do you struggle with most when shopping for fashion online?<br/>
-            <strong>A:</strong>“Too many options and most of them don’t match my style or size.”</p>
+          <p><strong>Q:</strong> What do you struggle with most when shopping for fashion online?<br/>
+            <strong>A:</strong> “Too many options and most of them don’t match my style or size.”</p>
           
-          <p><strong>Q:</strong>What features do you wish fashion apps had?<br/>
-            <strong>A:</strong>“A smarter recommendation engine and something to show how items would look on me.”</p>
-          
+          <p><strong>Q:</strong> What features do you wish fashion apps had?<br/>
+            <strong>A:</strong> “A smarter recommendation engine and something to show how items would look on me.”</p>
+
           <h4>Survey Summary (150 Users):</h4>
           <ul>
             <li>68% want better personalization in shopping apps.</li>
@@ -195,22 +592,22 @@
           </ul>
 
           <h3>User Insights:</h3>
-          <ul>
+          <ul class="insights-list">
             <li>Users are overwhelmed by too many unfiltered choices.<br/>
-            <em>Possible Solution:</em>Smart filters, AI-powered personalization.</li>
-            
+            <em>Possible Solution:</em> Smart filters, AI-powered personalization.</li>
+
             <li>Lack of real-life visual context makes decision-making hard.<br/>
-            <em>Possible Solution:</em>Virtual try-on, style previews.</li>
-            
+            <em>Possible Solution:</em> Virtual try-on, style previews.</li>
+
             <li>Users want quicker access to favorites and trends.<br/>
-            <em>Possible Solution:</em>Wishlists, trend feeds, and notifications.</li>
-            
+            <em>Possible Solution:</em> Wishlists, trend feeds, and notifications.</li>
+
             <li>Navigation needs to be mobile-friendly and streamlined.<br/>
-            <em>Possible Solution:</em>Responsive UI/UX with bottom navigation, swipe-friendly menus.</li>
+            <em>Possible Solution:</em> Responsive UI/UX with bottom navigation, swipe-friendly menus.</li>
           </ul>
 
           <h3>Empathy Map:</h3>
-          <table>
+          <table class="empathy-map-table">
             <tr>
               <td><strong>Who are the users?</strong></td>
               <td>Understand their background and situation.</td>
@@ -232,93 +629,146 @@
               <td>Note their emotions throughout the experience.</td>
             </tr>
           </table>
-          <img src="./assets/img/portfolio/App/E-commerve/Empathy.png" alt="image" style="margin: 20px 0;">
+          <img src="./assets/img/portfolio/App/E-commerve/Empathy.png" alt="Empathy Map" class="empathy-img" />
 
           <h3>User Persona:</h3>
           <p>A user persona is a detailed profile that represents you based on your skills, interests, and ongoing projects. It helps define your strengths, expertise, and goals, making it easier to align your work with your interests.</p>
-          <img src="./assets/img/portfolio/App/E-commerve/Persona1.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/Persona2.png" alt="image" style="margin: 10px 0;">
+          <img src="./assets/img/portfolio/App/E-commerve/Persona1.png" alt="Persona 1" class="persona-img" />
+          <img src="./assets/img/portfolio/App/E-commerve/Persona2.png" alt="Persona 2" class="persona-img" />
 
           <h3>User Story:</h3>
           <p>A User Story is a short, simple description of a feature told from the perspective of the person who desires the new capability, usually a user or customer of a system. It’s commonly used in Agile software development to capture a specific need in a concise way.</p>
-          <img src="./assets/img/portfolio/App/E-commerve/Story.png" alt="image" style="margin: 20px 0;">
+          <img src="./assets/img/portfolio/App/E-commerve/Story.png" alt="User Story" class="story-img" />
 
           <h3>User Journey Map:</h3>
           <p>A User Journey Map is a visual or narrative representation of the user’s experience as they interact with a product or service. It highlights the steps a user takes to achieve a goal, including their emotions, needs, and pain points at each stage. It helps designers and developers create more user-centric solutions.</p>
-          <img src="./assets/img/portfolio/App/E-commerve/Journey.png" alt="image" style="margin: 20px 0;">
+          <img src="./assets/img/portfolio/App/E-commerve/Journey.png" alt="User Journey Map" class="journey-img" />
         </div>
-        <div>
-          <h2>Define</h2>
-          <h3>Define Problem statement:</h3>
-          <p>Users face difficulty navigating fashion e-commerce apps that aren’t tailored to their tastes or optimized for mobile use. This leads to abandoned carts, poor engagement, and user dissatisfaction.</p>
-            <ul>
-              <li><strong>Solution:</strong>A mobile-first, AI-driven fashion app that delivers curated content, smart discovery, and engaging features like virtual try-ons and personal wishlists.</li>
-            </ul>
-            <img src="./assets/img/portfolio/App/E-commerve/Problem.png" alt="image" style="margin: 20px 0;">
 
-            <h3>Define Hypothesis statement:</h3>
-            <p>A Hypothesis Statement is a clear, testable prediction about the relationship between two or more variables. It is commonly used in scientific research, product development, A/B testing, and UX design to guide experiments and decision-making.</p>
-            <img src="./assets/img/portfolio/App/E-commerve/Hypothesis.png" alt="image" style="margin: 20px 0;">
+        <div class="define-section">
+          <h2>Define</h2>
+
+          <h3>Define Problem statement:</h3>
+          <p>
+            Users face difficulty navigating fashion e-commerce apps that aren’t tailored to their tastes or optimized for mobile use. This leads to abandoned carts, poor engagement, and user dissatisfaction.
+          </p>
+          <ul>
+            <li><strong>Solution:</strong> A mobile-first, AI-driven fashion app that delivers curated content, smart discovery, and engaging features like virtual try-ons and personal wishlists.</li>
+          </ul>
+          <img src="./assets/img/portfolio/App/E-commerve/Problem.png" alt="image">
+
+          <h3>Define Hypothesis statement:</h3>
+          <p>
+            A Hypothesis Statement is a clear, testable prediction about the relationship between two or more variables. It is commonly used in scientific research, product development, A/B testing, and UX design to guide experiments and decision-making.
+          </p>
+          <img src="./assets/img/portfolio/App/E-commerve/Hypothesis.png" alt="image">
         </div>
-        <div>
+
+        <div class="ideate-section">
           <h2>Ideate</h2>
+
           <h3>Goal Statement:</h3>
-          <p>Design a mobile-first e-commerce app that delivers trend-driven fashion items through an intuitive interface and offers personalized suggestions, wishlists, virtual try-ons, and seamless product discovery.</p>
-            <img src="./assets/img/portfolio/App/E-commerve/Goal.png" alt="image" style="margin: 20px 0;">
+          <p>
+            Design a mobile-first e-commerce app that delivers trend-driven fashion items through an intuitive interface and offers personalized suggestions, wishlists, virtual try-ons, and seamless product discovery.
+          </p>
+          <img src="./assets/img/portfolio/App/E-commerve/Goal.png" alt="image">
 
           <h3>User flow:</h3>
-          <p>A User Flow (also called a user flow diagram) is a visual representation of the path a user takes to accomplish a specific task within a product or website. It maps out each step or screen the user interacts with and shows the decision points along the journey.</p>
+          <p>
+            A User Flow (also called a user flow diagram) is a visual representation of the path a user takes to accomplish a specific task within a product or website. It maps out each step or screen the user interacts with and shows the decision points along the journey.
+          </p>
           <ul>
-              <li><strong>Home:</strong>Personalized product feed.</li>
-              <li><strong>Search:</strong>Smart filters by category, size, brand.</li>
-              <li><strong>Product Page:</strong>View images, reviews, virtual try-on.</li>
-              <li><strong>Wishlist:</strong>Save favorites, organize outfits.</li>
-              <li><strong>Cart/Checkout:</strong>Add to cart, secure payment, order tracking.</li>
-              <li><strong>Profile:</strong>Style preferences, order history, notifications.</li>
+            <li><strong>Home:</strong> Personalized product feed.</li>
+            <li><strong>Search:</strong> Smart filters by category, size, brand.</li>
+            <li><strong>Product Page:</strong> View images, reviews, virtual try-on.</li>
+            <li><strong>Wishlist:</strong> Save favorites, organize outfits.</li>
+            <li><strong>Cart/Checkout:</strong> Add to cart, secure payment, order tracking.</li>
+            <li><strong>Profile:</strong> Style preferences, order history, notifications.</li>
           </ul>
 
           <h3>Storyboard:</h3>
-          <p>A Storyboard is a visual or narrative representation of a user’s interaction with a product or service, shown through a sequence of illustrated or described scenes. It’s widely used in UX design, product development, and filmmaking to visualize the user experience, empathize with users, and communicate ideas clearly.</p>
-          <img src="./assets/img/portfolio/App/E-commerve/Storyboard.jpg" alt="image" style="margin: 20px 0;">
+          <p>
+            A Storyboard is a visual or narrative representation of a user’s interaction with a product or service, shown through a sequence of illustrated or described scenes. It’s widely used in UX design, product development, and filmmaking to visualize the user experience, empathize with users, and communicate ideas clearly.
+          </p>
+          <img src="./assets/img/portfolio/App/E-commerve/Storyboard.jpg" alt="image">
         </div>
 
-        <div>
+        <div class="audit-section">
           <h2>Competitive Audit</h2>
-          <p>A Competitive Audit is a strategic process where a business analyzes the strengths and weaknesses of its competitors to better understand the market landscape and improve its own positioning. It’s often used in marketing, product development, and business strategy.</p>
+          <p>
+            A Competitive Audit is a strategic process where a business analyzes the strengths and weaknesses of its competitors to better understand the market landscape and improve its own positioning. It’s often used in marketing, product development, and business strategy.
+          </p>
+
           <h3>Audit Goal:</h3>
-          <p>The goal of this competitive audit is to analyze how leading fashion e-commerce apps deliver mobile-first shopping experiences, particularly in the areas of personalization, product discovery, visual interaction (e.g., virtual try-ons), and user engagement. By studying their strengths and gaps, this audit helps identify opportunities for the E-Commerce Fashion App to stand out through unique value propositions such as a highly tailored feed, intuitive filters, responsive design, and immersive features like wishlists and virtual try-on capabilities.</p>
-          <img src="./assets/img/portfolio/App/E-commerve/Audit1.png" alt="image" style="margin: 20px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/Audit2.png" alt="image" style="margin: 20px 0;">
+          <p>
+            The goal of this competitive audit is to analyze how leading fashion e-commerce apps deliver mobile-first shopping experiences, particularly in the areas of personalization, product discovery, visual interaction (e.g., virtual try-ons), and user engagement. By studying their strengths and gaps, this audit helps identify opportunities for the E-Commerce Fashion App to stand out through unique value propositions such as a highly tailored feed, intuitive filters, responsive design, and immersive features like wishlists and virtual try-on capabilities.
+          </p>
+          <img src="./assets/img/portfolio/App/E-commerve/Audit1.png" alt="image">
+          <img src="./assets/img/portfolio/App/E-commerve/Audit2.png" alt="image">
         </div>
         
-        <div>
+        <div class="paper-wireframe-section">
           <h2>Paper Wireframe</h2>
-          <p>A Paper Wireframe is a hand-drawn sketch of a user interface that outlines the basic layout, structure, and functionality of a digital product like a website or mobile app. It's an essential early step in the design process to quickly explore ideas and get feedback without worrying about visual details.</p>
-          <img src="./assets/img/portfolio/App/E-commerve/Paper.jpg" alt="image" style="margin: 20px 0;">
+          <p>
+            A Paper Wireframe is a hand-drawn sketch of a user interface that outlines the basic layout, structure, and functionality of a digital product like a website or mobile app. It's an essential early step in the design process to quickly explore ideas and get feedback without worrying about visual details.
+          </p>
+          <img src="./assets/img/portfolio/App/E-commerve/Paper.jpg" alt="image">
         </div>
 
-        <div>
-          <h2>UX Research Study — Plan</h2>
-          <img src="./assets/img/portfolio/App/E-commerve/Research1.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/Research2.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/Research3.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/Research4.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/Research5.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/Research6.png" alt="image" style="margin: 10px 0;">
-        </div>
-
-        <div>
+        <div class="low-fidelity-section">
           <h2>Low-fidelity designs</h2>
-          <p>Low-fidelity designs are basic visual representations of a product or system used in the early stages of design and development. They focus on layout, structure, and functionality rather than aesthetics, colors, or final content.</p>
-          <img src="./assets/img/portfolio/App/E-commerve/Low.png" alt="image" style="margin: 10px 0;">
+          <p>
+            Low-fidelity designs are basic visual representations of a product or system used in the early stages of design and development. They focus on layout, structure, and functionality rather than aesthetics, colors, or final content.
+          </p>
+          <img src="./assets/img/portfolio/App/E-commerve/Low.png" alt="image">
         </div>
 
-        <div>
+        <div class="high-fidelity-section">
           <h2>High-fidelity designs</h2>
-          <p>High-fidelity (hi-fi) designs are detailed and polished visual representations of a product that closely resemble the final version. They are typically created after low-fidelity designs have been approved and refined.</p>
-          <img src="./assets/img/portfolio/App/E-commerve/High1.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/High2.png" alt="image" style="margin: 10px 0;">
-          <img src="./assets/img/portfolio/App/E-commerve/High3.png" alt="image" style="margin: 10px 0;">
+          <p>
+            High-fidelity (hi-fi) designs are detailed and polished visual representations of a product that closely resemble the final version. They are typically created after low-fidelity designs have been approved and refined.
+          </p>
+          <img src="./assets/img/portfolio/App/E-commerve/High1.png" alt="image">
+          <img src="./assets/img/portfolio/App/E-commerve/High2.png" alt="image">
+          <img src="./assets/img/portfolio/App/E-commerve/High3.png" alt="image">
+        </div>
+
+        <div class="research-section">
+          <h2>UX Research Study — Plan</h2>
+          <img src="./assets/img/portfolio/App/E-commerve/Research1.png" alt="image">
+          <img src="./assets/img/portfolio/App/E-commerve/Research2.png" alt="image">
+          <img src="./assets/img/portfolio/App/E-commerve/Research3.png" alt="image">
+          <img src="./assets/img/portfolio/App/E-commerve/Research4.png" alt="image">
+          <img src="./assets/img/portfolio/App/E-commerve/Research5.png" alt="image">
+          <img src="./assets/img/portfolio/App/E-commerve/Research6.png" alt="image">
+        </div>
+
+        <div class="accessibility-section">
+          <h2>Accessibility Considerations</h2>
+          <ul>
+            <li><strong>Color Contrast:</strong> Ensured high contrast between text and background for readability.</li>
+            <li><strong>Alt Text:</strong> Added descriptive alt text to all meaningful images for screen readers.</li>
+            <li><strong>Scalable Text:</strong> Supported dynamic text resizing to accommodate users with low vision.</li>
+            <li><strong>Touch Targets:</strong> Designed buttons and icons with appropriate sizes for easy tapping.</li>
+            <li><strong>Voice Compatibility:</strong> Prepared for future voice-command features for hands-free interaction.</li>
+          </ul>
+        </div>
+
+        <div class="takeaway-section">
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>Users prefer personalized and streamlined fashion shopping experiences.</li>
+            <li>Mobile-first design and virtual try-on features greatly enhance user engagement.</li>
+            <li>Simplified navigation and wishlists reduce cart abandonment.</li>
+            <li>Empathizing with users revealed the real friction points in current e-commerce apps.</li>
+          </ul>
+        </div>
+
+        <div class="conclusion-section">
+          <h2>Conclusion</h2>
+          <p>
+            This fashion e-commerce app was designed with a user-first mindset, blending trend-driven shopping with personalization, accessibility, and mobile-optimized interfaces. From empathizing with users to crafting intuitive designs, each step prioritized seamless interaction and inclusivity. The final product aims to inspire user confidence, encourage exploration, and deliver a joyful shopping experience.
+          </p>
         </div>
 
       </div>
